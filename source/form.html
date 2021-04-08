@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона - оставьте свой отзыв</title>
 </head>
 
-<body class="page__body">
+<body class="page-body">
 
   <header class="page-header">
     <a class="page-header__logo">
@@ -18,22 +18,22 @@
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-          <li class="site-list__item site-list__item--active">
+          <li class="main-nav__item main-nav__item--active">
             <a>
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="media.html">
               Фото и видео
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="form.html">
               Форма отзыва
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="https://htmlacademy.ru">
               HTML Academy
             </a>
@@ -44,75 +44,75 @@
   </header>
 
   <main class="page-form">
-    <img class="page-form-intro" src="img/intro-form.svg" alt="Седона">
-    <div class="page-form-intro__wrapper">
-      <h1 class="page-form-intro__welcome-title">Оставьте свой отзыв</h1>
-      <h2 class="page-form-intro__welcome-subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
-        посещенных вами достопримечательностях</h2>
-    </div>
+    <img class="page-form__img" src="img/intro-form.svg" alt="Седона">
     <form action="https://echo.htmlacademy.ru" method="GET">
       <section class="form">
-        <div class="visitor-name__wrapper">
+        <div class="form__wrapper">
+          <h1 class="form__title">Оставьте свой отзыв</h1>
+          <h2 class="form__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
+            посещенных вами достопримечательностях</h2>
+        </div>
+        <div class="form__box">
           <h3 class="form__intro">Представьтесь:</h3>
           <div class="form__item">
-            <label for="name">Имя:</label>
-            <input class="form__info" type="text" value="Пётр" id="name">
+            <label class="form__label" for="name">Имя:</label>
+            <input class="form__input" type="text" value="Пётр" id="name">
           </div>
           <div class="form__item">
-            <label for="surname">Фамилия:</label>
-            <input class="form__info" type="text" value="Иванов" id="surname">
+            <label class="form__label" for="surname">Фамилия:</label>
+            <input class="form__input" type="text" value="Иванов" id="surname">
           </div>
           <div class="form__item">
-            <label for="middle-name">Отчество:</label>
-            <input class="form__info" type="text" value="Александрович" id="middle-name">
+            <label class="form__label" for="middle-name">Отчество:</label>
+            <input class="form__input" type="text" value="Александрович" id="middle-name">
           </div>
         </div>
-        <div class="visitor-contact__wrapper">
+        <div class="form__box">
           <h3 class="form__intro">Контактная информация:</h3>
           <div class="form__item">
-            <label for="phone">Контактный телефон:</label>
-            <input class="form__info" type="text" value="Введите телефон" id="phone">
+            <label class="form__label" for="phone">Контактный телефон:</label>
+            <input class="form__input" type="text" value="Введите телефон" id="phone">
           </div>
           <div class="form__item">
-            <label for="email">Электронная почта:</label>
-            <input class="form__info" type="text" value="Введите e-mail" id="email">
+            <label class="form__label" for="email">Электронная почта:</label>
+            <input class="form__input" type="text" value="Введите e-mail" id="email">
           </div>
         </div>
-        <div class="impressions__wrapper">
+        <div class="form__box">
           <h3 class="form__intro">Ваше общее впечатления:</h3>
           <div class="form__item">
-            <input class="form__info" type="radio" id="positive" checked>
-            <label for="positive">Скорее положительное</label>
+            <input class="form__input" type="radio" id="positive" checked>
+            <label class="form__label for="positive">Скорее положительное</label>
           </div>
           <div class="form__item">
-            <input class="form__info" type="radio" id="negative">
-            <label for="negative">Скорее отрицательное</label>
+            <input class="form__input" type="radio" id="negative">
+            <label class="form__label" for="negative">Скорее отрицательное</label>
           </div>
           <div class="form__item">
-            <input class="form__info" type="radio" id="doubts">
-            <label for="doubts">Затрудняюсь ответить</label>
+            <input class="form__input" type="radio" id="doubts">
+            <label class="form__label" for="doubts">Затрудняюсь ответить</label>
           </div>
         </div>
-        <div class="attractions__wrapper">
-          <h3 class="form-intro">Посещенные достопримечательности:</h3>
+        <div class="form__box">
+          <h3 class="form__intro">Посещенные достопримечательности:</h3>
           <div class="form__item">
-            <input class="form__info" type="checkbox" id="brige" checked>
-            <label for="brige">Мост Дьявола</label>
+            <input class="form__input" type="checkbox" id="brige" checked>
+            <label class="form__label" for="brige">Мост Дьявола</label>
           </div>
           <div class="form__item">
-            <input class="form__info" type="checkbox" id="mountain" checked>
-            <label for="mountain">Гора Колокол</label>
+            <input class="form__input" type="checkbox" id="mountain" checked>
+            <label class="form__label" for="mountain">Гора Колокол</label>
           </div>
           <div class="form__item">
-            <input class="form__info" type="checkbox" id="park" checked>
-            <label for="park">Слайд-парк</label>
+            <input class="form__input" type="checkbox" id="park" checked>
+            <label class="form__label" for="park">Слайд-парк</label>
           </div>
           <div class="form__item">
-            <input class="form__info" type="checkbox" id="rocks">
-            <label for="rocks">Красные скалы</label>
+            <input class="form__input" type="checkbox" id="rocks">
+            <label class="form__label" for="rocks">Красные скалы</label>
           </div>
         </div>
-        <div class="emotions__wrapper">
+        <div class="form__box">
           <h3 class="form__intro">Опишите свои эмоции:</h3>
           <div class="form__textarea">
             <textarea name="emotion">Опишите подробно все свои восторги</textarea>
