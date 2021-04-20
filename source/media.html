@@ -4,14 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона - медиа</title>
+  <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body class="page-body">
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="img/logotype-mobile.png" alt="Логотип Седоны">
-    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -19,32 +17,39 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="media.html">
+            <a class="main-nav__link" href="media.html">
               Фото и видео
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__link" href="form.html">
               Форма отзыва
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">
+            <a class="main-nav__link" href="https://htmlacademy.ru">
               HTML Academy
             </a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="page-header__logo-wrapper">
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logotype-mobile.png" alt="Логотип Седоны">
+      </a>
+    </div>
   </header>
 
-  <main class="page-media">
-    <img class="page-media__img" src="img/intro-form.svg" alt="Седона">
+  <main class="page-secondary">
+    <div class="page-secondary__img-bg">
+      <img class="page-secondary__img" src="img/intro-form.svg" alt="Седона">
+    </div>
     <section class="photos">
       <div class="photos__intro">
         <h1 class="photos__title">Фото и видео</h1>
@@ -54,7 +59,7 @@
       <div class="photos__box">
         <div class="photos__item">
           <a href="#" class="photos__link">
-            <img class="photos__img" src="img/road.jpg" alt="Дорога">
+            <img class="photos__img" src="img/road.jpg" width="280" height="280" alt="Дорога">
           </a>
         </div>
         <div class="photos__describtion">
@@ -66,7 +71,7 @@
       <div class="photos__box">
         <div class="photos__item">
           <a href="#" class="photos__link">
-            <img class="photos__img" src="img/flower.jpg" alt="Растение">
+            <img class="photos__img" src="img/flower.jpg" width="280" height="280" alt="Растение">
           </a>
         </div>
         <div class="photos__describtion">
@@ -78,7 +83,7 @@
       <div class="photos__box">
         <div class="photos__item">
           <a href="#" class="photos__link">
-            <img class="photos__img" src="img/forest.jpg" alt="Лес">
+            <img class="photos__img" src="img/forest.jpg" width="280" height="280" alt="Лес">
           </a>
         </div>
         <div class="photos__describtion">
@@ -90,7 +95,7 @@
       <div class="photos__box">
         <div class="photos__item">
           <a href="#" class="photos__link">
-            <img class="photos__img" src="img/devil-brige.jpg" alt="Мост дьявола">
+            <img class="photos__img" src="img/devil-brige.jpg" width="280" height="280" alt="Мост дьявола">
           </a>
         </div>
         <div class="photos__describtion">
@@ -107,25 +112,25 @@
           раз.</h2>
       </div>
       <div class="video__item">
-        <img src="img/video.jpg" alt="Видео">
+        <img src="img/video.jpg" width="320" height="200" alt="Видео">
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="hashtag">#visitsedona</div>
+    <div class="page-footer__hashtag">#visitsedona</div>
     <ul class="page-footer__social-list">
       <li class="page-footer__list-item">
-        <div class="twitter">Твиттер</div>
+        <div class="page-footer__item">Твиттер</div>
       </li>
       <li class="page-footer__list-item">
-        <div class="facebook">Фейсбук</div>
+        <div class="page-footer__item">Фейсбук</div>
       </li>
       <li class="page-footer__list-item">
-        <div class="youtube">Ютюб</div>
+        <div class="page-footer__item">Ютюб</div>
       </li>
     </ul>
-    <div class="copyright">Разработано</div>
+    <div class="page-footer__copyright">Разработано</div>
   </footer>
 
 </body>
