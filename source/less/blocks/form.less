@@ -1,5 +1,5 @@
 .form {
-  background-color: white;
+  background-color: @white;
 }
 
 .form__wrapper {
@@ -18,8 +18,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
-  color: #333;
-  padding-top: 42px;
+  color: @dark-grey;
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 10px;
@@ -46,14 +45,13 @@
   padding-left: 20px;
   padding-bottom: 20px;
   font-size: 14px;
-  color: #333;
-  outline: 1px solid green;
+  color: @dark-grey;
 }
 
 .form__input {
   height: 58px;
   width: 192px;
-  background: #f2f2f2;
+  background: @light-grey;
   border: none;
   outline: none;
   font-size: 18px;
@@ -62,13 +60,8 @@
 }
 
 .form__input--circle {
-  outline: 1px solid red;
   width: 48px;
   height: 48px;
-}
-
-.form__label--circle {
-  outline: 1px solid red;
 }
 
 .form__input--checkbox {
