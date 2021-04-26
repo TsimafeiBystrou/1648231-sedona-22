@@ -4,14 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона - оставьте свой отзыв</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body">
+<body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="img/logotype-mobile.png" alt="Логотип Седоны">
-    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -19,32 +17,39 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="media.html">
+            <a class="main-nav__link" href="media.html">
               Фото и видео
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__link" href="form.html">
               Форма отзыва
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">
+            <a class="main-nav__link" href="https://htmlacademy.ru">
               HTML Academy
             </a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="page-header__logo-wrapper">
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logotype-mobile.png" alt="Логотип Седоны">
+      </a>
+    </div>
   </header>
 
-  <main class="page-form">
-    <img class="page-form__img" src="img/intro-form.svg" alt="Седона">
+  <main class="page-secondary">
+    <div class="page-secondary__img-bg">
+      <img class="page-secondary__img" src="img/intro-form.svg" alt="Седона">
+    </div>
     <form action="https://echo.htmlacademy.ru" method="GET">
       <section class="form">
         <div class="form__wrapper">
@@ -80,36 +85,36 @@
         </div>
         <div class="form__box">
           <h3 class="form__intro">Ваше общее впечатления:</h3>
-          <div class="form__item">
-            <input class="form__input" type="radio" id="positive" checked>
-            <label class="form__label for="positive">Скорее положительное</label>
+          <div class="form__item form__item--circle">
+            <input class="form__input form__input--circle" type="radio" id="positive" checked>
+            <label class="form__label form__label--circle" for=" positive">Скорее положительное</label>
           </div>
-          <div class="form__item">
-            <input class="form__input" type="radio" id="negative">
-            <label class="form__label" for="negative">Скорее отрицательное</label>
+          <div class="form__item form__item--circle">
+            <input class="form__input form__input--circle" type="radio" id="negative">
+            <label class="form__label form__label--circle" for="negative">Скорее отрицательное</label>
           </div>
-          <div class="form__item">
-            <input class="form__input" type="radio" id="doubts">
-            <label class="form__label" for="doubts">Затрудняюсь ответить</label>
+          <div class="form__item form__item--circle">
+            <input class="form__input form__input--circle" type="radio" id="doubts">
+            <label class="form__label form__label--circle" for="doubts">Затрудняюсь ответить</label>
           </div>
         </div>
         <div class="form__box">
           <h3 class="form__intro">Посещенные достопримечательности:</h3>
           <div class="form__item">
-            <input class="form__input" type="checkbox" id="brige" checked>
-            <label class="form__label" for="brige">Мост Дьявола</label>
+            <input class="form__input form__input--checkbox" type="checkbox" id="brige" checked>
+            <label class="form__label form__label--checkbox" for="brige">Мост Дьявола</label>
           </div>
           <div class="form__item">
-            <input class="form__input" type="checkbox" id="mountain" checked>
-            <label class="form__label" for="mountain">Гора Колокол</label>
+            <input class="form__input form__input--checkbox" type="checkbox" id="mountain" checked>
+            <label class="form__label form__label--checkbox" for="mountain">Гора Колокол</label>
           </div>
           <div class="form__item">
-            <input class="form__input" type="checkbox" id="park" checked>
-            <label class="form__label" for="park">Слайд-парк</label>
+            <input class="form__input form__input--checkbox" type="checkbox" id="park" checked>
+            <label class="form__label form__label--checkbox" for="park">Слайд-парк</label>
           </div>
           <div class="form__item">
-            <input class="form__input" type="checkbox" id="rocks">
-            <label class="form__label" for="rocks">Красные скалы</label>
+            <input class="form__input form__input--checkbox" type="checkbox" id="rocks">
+            <label class="form__label form__label--checkbox" for="rocks">Красные скалы</label>
           </div>
         </div>
         <div class="form__box">
@@ -126,19 +131,19 @@
   </main>
 
   <footer class="page-footer">
-    <div class="hashtag">#visitsedona</div>
+    <div class="page-footer__hashtag">#visitsedona</div>
     <ul class="page-footer__social-list">
       <li class="page-footer__list-item">
-        <div class="twitter">Твиттер</div>
+        <div class="page-footer__item">Твиттер</div>
       </li>
       <li class="page-footer__list-item">
-        <div class="facebook">Фейсбук</div>
+        <div class="page-footer__item">Фейсбук</div>
       </li>
       <li class="page-footer__list-item">
-        <div class="youtube">Ютюб</div>
+        <div class="page-footer__item">Ютюб</div>
       </li>
     </ul>
-    <div class="copyright">Разработано</div>
+    <div class="page-footer__copyright">Разработано</div>
   </footer>
 
 </body>
