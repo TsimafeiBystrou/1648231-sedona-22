@@ -35,3 +35,14 @@
   font-weight: normal;
   color: @dark-grey;
 }
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  .features__list-item {
+    width: 185px;
+  }
+}

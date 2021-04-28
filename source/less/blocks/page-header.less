@@ -14,3 +14,20 @@
   transform: translateX(-50%);
   z-index: 1;
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: @white;
+  }
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    outline: 1px solid blue;
+    display: none;
+  }
+}

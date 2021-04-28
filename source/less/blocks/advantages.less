@@ -42,10 +42,25 @@
 }
 
 .advantages__box--grey {
-  background-color: #eee;
+  background-color: @grey;
   color: @black;
 }
 
 .advantages__subtitle--grey {
   color: @dark-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: @main-blue;
+    color: @white;
+    text-align: center;
+    &--grey {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }

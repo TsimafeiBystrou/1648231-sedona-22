@@ -34,3 +34,32 @@
 .main-nav__toggle{
   color:red;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__item{
+    background-color: @white;
+    border: none;
+    min-width: 20%;
+    max-height: 56px;
+    padding: 15px 23px;
+    margin: 0 auto;
+    &--right {
+      margin-left: 20%;
+    }
+  }
+  .main-nav__link {
+    color: @black;
+    background-color: @white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .main-nav__list {
+    display: flex;
+    width: 100%;
+  }
+}
+
