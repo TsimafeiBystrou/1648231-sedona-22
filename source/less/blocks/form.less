@@ -68,3 +68,46 @@
   width: 46px;
   height: 46px;
 }
+
+@media (min-width: @tablet-width) {
+  .form__box--large-screen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .form__box:nth-child(2) {
+    width: 100%;
+    order: 1;
+  }
+  .form__box:nth-child(3) {
+    order: -1;
+  }
+  .form__input--tablet {
+    width: 100%;
+  }
+  .form__attractions{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form__item--attractions {
+    min-width: 180px;
+    width: 50%;
+    padding-left: 160px;
+    padding-bottom: 90px;
+    padding-top: 48px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__contacts {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .form__attractions{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}

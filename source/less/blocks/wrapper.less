@@ -1,6 +1,18 @@
+.wrapper {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .wrapper {
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 40px;
     background-color: @light-grey;
     margin: 0 auto;
