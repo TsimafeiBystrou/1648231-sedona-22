@@ -6,9 +6,9 @@
   width: 260px;
   height: 120px;
   padding-top: 33px;
-  // padding-bottom: 27px;
   padding-right: 30px;
   padding-left: 30px;
+  margin: 0 auto;
 }
 
 .search__title {
@@ -25,4 +25,10 @@
   line-height: 24px;
   font-weight: normal;
   color: @dark-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .search__wrapper {
+    margin: 0 auto;
+  }
 }

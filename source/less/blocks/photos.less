@@ -33,3 +33,23 @@
 .photos__author {
   color: @dark-grey;
 }
+
+@media (min-width: @tablet-width) {
+  .photos__info-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .photos__galery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__galery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
+}
