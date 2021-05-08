@@ -47,6 +47,23 @@
       </div>
     </header>
 
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
     <main class="page-secondary">
       <div class="page-secondary__img-bg">
         <img class="page-secondary__img" src="img/intro-form.svg" alt="Седона">
@@ -80,10 +97,12 @@
                 <div class="form__item">
                   <label class="form__label" for="phone">Контактный телефон:</label>
                   <input class="form__input form__input--tablet" type="text" value="Введите телефон" id="phone">
+                  <div class="form__icon-box form__icon-box--phone"></div>
                 </div>
                 <div class="form__item">
                   <label class="form__label" for="email">Электронная почта:</label>
                   <input class="form__input form__input--tablet" type="text" value="Введите e-mail" id="email">
+                  <div class="form__icon-box form__icon-box--mail"></div>
                 </div>
               </div>
             </div>
@@ -141,13 +160,13 @@
       <div class="page-footer__hashtag">#visitsedona</div>
       <ul class="page-footer__social-list">
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Твиттер</div>
+          <div class="page-footer__item page-footer__item--twitter"></div>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Фейсбук</div>
+          <div class="page-footer__item page-footer__item--facebook"></div>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Ютюб</div>
+          <div class="page-footer__item page-footer__item--youtube"></div>
         </li>
       </ul>
       <div class="page-footer__copyright">Разработано</div>

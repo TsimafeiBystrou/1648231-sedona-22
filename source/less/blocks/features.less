@@ -16,6 +16,40 @@
   padding-right: 11px;
   padding-top: 35px;
   padding-bottom: 26px;
+  position: relative;
+  &--housing::before {
+    content: "";
+    display: block;
+    background-image: url(../../img/icon-house.svg);
+    position: absolute;
+    left: 21px;
+    top: 26px;
+    width: 39px;
+    height: 37px;
+    background-repeat: no-repeat;
+  }
+  &--souvenirs::before {
+    content: "";
+    display: block;
+    background-image: url(../../img/icon-gift.svg);
+    position: absolute;
+    left: 21px;
+    top: 26px;
+    width: 32px;
+    height: 38px;
+    background-repeat: no-repeat;
+  }
+  &--food::before {
+    content: "";
+    display: block;
+    background-image: url(../../img/icon-burger.svg);
+    position: absolute;
+    left: 21px;
+    top: 26px;
+    width: 40px;
+    height: 35px;
+    background-repeat: no-repeat;
+  }
 }
 
 .features__item-title {

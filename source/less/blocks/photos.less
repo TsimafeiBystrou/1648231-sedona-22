@@ -34,6 +34,21 @@
   color: @dark-grey;
 }
 
+.photos__likes {
+  margin-left: 30px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    background-image: url(../../img/icon-like.svg);
+    position: absolute;
+    left: -30px;
+    width: 23px;
+    height: 21px;
+    background-repeat: no-repeat;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .photos__info-wrapper {
     display: flex;
@@ -42,6 +57,17 @@
   .photos__galery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  .photos__item {
+    margin: 0;
+    padding: 0;
+  }
+  .photos__describtion {
+    background-color: @light-grey;
+  }
+  .photos__link {
+    margin: 0;
     padding: 0;
   }
 }
