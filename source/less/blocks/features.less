@@ -78,5 +78,44 @@
   }
   .features__list-item {
     width: 185px;
+    padding-top: 128px;
+    text-align: center;
+    position: relative;
+    &--housing::before {
+      content: "";
+      display: block;
+      background-image: url(../../img/icon-house.svg);
+      position: absolute;
+      left: 120px;
+      width: 75px;
+      height: 72px;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      outline: 1px solid red;
+    }
+    &--souvenirs::before {
+      content: "";
+      display: block;
+      background-image: url(../../img/icon-gift.svg);
+      position: absolute;
+      left: 120px;
+      width: 75px;
+      height: 72px;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      outline: 1px solid red;
+    }
+    &--food::before {
+      content: "";
+      display: block;
+      background-image: url(../../img/icon-burger.svg);
+      position: absolute;
+      left: 120px;
+      width: 75px;
+      height: 72px;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      outline: 1px solid red;
+    }
   }
 }
