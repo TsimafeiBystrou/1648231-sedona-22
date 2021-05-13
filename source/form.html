@@ -42,7 +42,11 @@
       </nav>
       <div class="page-header__logo-wrapper">
         <a href="index.html" class="page-header__logo">
-          <img src="img/logotype-mobile.png" alt="Логотип Седоны">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" alt="Логотип Седоны">
+          </picture>
         </a>
       </div>
     </header>
@@ -66,7 +70,11 @@
 
     <main class="page-secondary">
       <div class="page-secondary__img-bg">
-        <img class="page-secondary__img" src="img/intro-form.svg" alt="Седона">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/intro-second-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/intro-second-tablet.svg">
+          <img class="page-secondary__img" src="img/intro-second.svg" alt="Седона">
+        </picture>
       </div>
       <form action="https://echo.htmlacademy.ru" method="GET">
         <section class="form">
