@@ -11,8 +11,8 @@
 <body>
   <div class="wrapper">
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle " type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -42,14 +42,38 @@
       </nav>
       <div class="page-header__logo-wrapper">
         <a href="#" class="page-header__logo">
-          <img src="img/logotype-mobile.png" alt="Логотип Седоны">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" alt="Логотип Седоны">
+          </picture>
         </a>
       </div>
     </header>
 
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
     <main class="page-main">
       <div class="page-main__img-bg">
-        <img class="page-main__img" src="img/intro-index.svg" alt="Добро пожаловать">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/intro-index-tablet.svg">
+          <img class="page-main__img" src="img/intro-index.svg" alt="Добро пожаловать">
+        </picture>
       </div>
       <div class="intro">
         <h1 class="intro__welcome-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -62,22 +86,26 @@
           <p class="advantages__subtitle">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="advantages__box-image">
-          <img class="advantages-img " src="img/real-city-photo.jpg" alt="Городок Седона">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/real-city-photo-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/real-city-photo-tablet.jpg">
+            <img class="advantages-img " src="img/real-city-photo.jpg" alt="Городок Седона">
+          </picture>
         </div>
       </section>
       <section class="features">
         <ul class="features__list">
-          <li class="features__list-item features--add">
+          <li class="features__list-item features__list-item--housing">
             <h3 class="features__item-title">Жильё</h3>
             <p class="features__item-subtitle">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="features__list-item features--add">
-            <h3 class="features__item-title">Еда</h3>
-            <p class="features__item-subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="features__list-item features--add">
+          <li class="features__list-item features__list-item--souvenirs">
             <h3 class="features__item-title">Сувениры</h3>
             <p class="features__item-subtitle">Не только китайского, но и местного производства!</p>
+          </li>
+          <li class="features__list-item features__list-item--food">
+            <h3 class="features__item-title">Еда</h3>
+            <p class="features__item-subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
         </ul>
       </section>
@@ -88,7 +116,11 @@
           <p class="advantages__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </div>
         <div class="advantages__box-image">
-          <img class="advantages__img" src="img/devil-brige.jpg" alt="Мост дьявола">
+          <picture>
+            <source media="(min-width: 1280px" srcset="img/devil-brige-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/devil-brige-tablet.jpg">
+            <img class="advantages__img" src="img/devil-brige.jpg" alt="Мост дьявола">
+          </picture>
         </div>
       </section>
       <section class="advantages advantages--grey">
@@ -117,19 +149,30 @@
         </div>
         <button class="button">Найти гостиницу</button>
       </section>
+      <section class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419425.0058637825!2d-111.77316651369811!3d34.78687063463441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2spl!4v1615543775689!5m2!1sru!2spl"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" title="Sedona, Аризона, США"></iframe>
+      </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__hashtag">#visitsedona</div>
       <ul class="page-footer__social-list">
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Твиттер</div>
+          <a href="#">
+            <div class="page-footer__item page-footer__item--twitter"></div>
+          </a>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Фейсбук</div>
+          <a href="#">
+            <div class="page-footer__item page-footer__item--facebook"></div>
+          </a>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Ютюб</div>
+          <a href="#">
+            <div class="page-footer__item page-footer__item--youtube"></div>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright">Разработано</div>

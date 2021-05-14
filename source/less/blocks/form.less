@@ -46,6 +46,11 @@
   padding-bottom: 20px;
   font-size: 14px;
   color: @dark-grey;
+  display: flex;
+}
+
+.form__label {
+  position: relative;
 }
 
 .form__input {
@@ -59,14 +64,20 @@
   padding-left: 20px;
 }
 
-.form__input--circle {
-  width: 48px;
-  height: 48px;
-}
-
-.form__input--checkbox {
-  width: 46px;
-  height: 46px;
+.form__icon-box {
+  width: 58px;
+  height: 58px;
+  background-color: @icon-box;
+  &--phone {
+    background-image: url(../../img/icon-phone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &--mail {
+    background-image: url(../../img/icon-mail.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {

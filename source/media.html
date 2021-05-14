@@ -42,14 +42,39 @@
       </nav>
       <div class="page-header__logo-wrapper">
         <a href="index.html" class="page-header__logo">
-          <img src="img/logotype-mobile.png" alt="Логотип Седоны">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" alt="Логотип Седоны">
+          </picture>
         </a>
       </div>
     </header>
 
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
     <main class="page-secondary">
       <div class="page-secondary__img-bg">
-        <img class="page-secondary__img" src="img/intro-form.svg" alt="Седона">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/intro-second-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/intro-second-tablet.svg">
+          <img class="page-secondary__img" src="img/intro-second.svg" alt="Седона">
+        </picture>
       </div>
       <section class="photos">
         <div class="photos__intro">
@@ -60,7 +85,11 @@
         <div class="photos__box">
           <div class="photos__item">
             <a href="#" class="photos__link">
-              <img class="photos__img" src="img/road.jpg" width="280" height="280" alt="Дорога">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/road-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/road-tablet.jpg">
+                <img class="photos__img" src="img/road.jpg" alt="Дорога">
+              </picture>
             </a>
           </div>
           <div class="photos__describtion">
@@ -75,7 +104,11 @@
           <div class="photos__box">
             <div class="photos__item">
               <a href="#" class="photos__link">
-                <img class="photos__img" src="img/flower.jpg" width="280" height="280" alt="Растение">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/flower-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/flower-tablet.jpg">
+                  <img class="photos__img" src="img/flower.jpg" alt="Растение">
+                </picture>
               </a>
             </div>
             <div class="photos__describtion">
@@ -89,7 +122,11 @@
           <div class="photos__box">
             <div class="photos__item">
               <a href="#" class="photos__link">
-                <img class="photos__img" src="img/forest.jpg" width="280" height="280" alt="Лес">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/forest-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/forest-tablet.jpg">
+                  <img class="photos__img" src="img/forest.jpg" alt="Лес">
+                </picture>
               </a>
             </div>
             <div class="photos__describtion">
@@ -103,7 +140,11 @@
           <div class="photos__box">
             <div class="photos__item">
               <a href="#" class="photos__link">
-                <img class="photos__img" src="img/devil-brige.jpg" width="280" height="280" alt="Мост дьявола">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/devil-brige-desktop-media.jpg">
+                  <source media="(min-width: 768px)" srcset="img/devil-brige-tablet-media.jpg">
+                  <img class="photos__img" src="img/devil-brige.jpg" alt="Мост дьявола">
+                </picture>
               </a>
             </div>
             <div class="photos__describtion">
@@ -123,7 +164,11 @@
             раз.</h2>
         </div>
         <div class="video__item">
-          <img src="img/video.jpg" width="320" height="200" alt="Видео">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/video-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg">
+            <img class="video__img" src="img/video.jpg" alt="Видео">
+          </picture>
         </div>
       </section>
     </main>
@@ -132,13 +177,13 @@
       <div class="page-footer__hashtag">#visitsedona</div>
       <ul class="page-footer__social-list">
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Твиттер</div>
+          <div class="page-footer__item page-footer__item--twitter"></div>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Фейсбук</div>
+          <div class="page-footer__item page-footer__item--facebook"></div>
         </li>
         <li class="page-footer__list-item">
-          <div class="page-footer__item">Ютюб</div>
+          <div class="page-footer__item page-footer__item--youtube"></div>
         </li>
       </ul>
       <div class="page-footer__copyright">Разработано</div>
