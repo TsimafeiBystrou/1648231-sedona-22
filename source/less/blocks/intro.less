@@ -9,11 +9,12 @@
 
 .intro__welcome-title {
   margin: 0 auto;
-  padding: 17px;
+  padding-top: 15px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  width: 260px;
 }
 
 .intro__welcome-subtitle {
@@ -22,5 +23,25 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  padding-top: 10px;
+  padding-top: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__welcome-title {
+  font-size: 21px;
+  width: 520px;
+  padding-top: 25px;
+  }
+  .intro__welcome-subtitle {
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__welcome-title {
+    padding-top: 40px;
+  }
+  .intro__welcome-subtitle {
+    padding-bottom: 30px;
+  }
 }
