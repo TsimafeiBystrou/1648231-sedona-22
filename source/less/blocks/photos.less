@@ -1,41 +1,53 @@
 .photos__title {
   margin: 0;
-  padding-top: 32px;
+  padding-top: 45px;
   font-size: 18px;
   line-height: 26px;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .photos__subtitle {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  width: 290px;
 }
 
 .photos__item {
   padding: 0;
   margin: 0;
   border-top: 1px solid  #E5E5E5;
-  padding-top: 16px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 25px;
 }
 
 .photos__describtion {
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;
+  font-weight: bold;
   text-align: left;
   padding-left: 20px;
 }
 
+.photos__name {
+  padding: 0;
+  margin: 0;
+  padding-top: 8px;
+}
+
 .photos__author {
   color: @dark-grey;
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  font-weight: normal;
 }
 
 .photos__likes {
   margin-left: 30px;
+  padding-left: 5px;
   position: relative;
   &::before {
     content: "";
@@ -50,6 +62,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photos__title {
+    font-size: 30px;
+    line-height: 26px;
+    font-weight: bold;
+    padding-top: 75px;
+  }
+  .photos__subtitle {
+    width: 450px;
+    padding-top: 25px;
+    margin-left: 150px;
+    margin-bottom: 55px;
+  }
   .photos__info-wrapper {
     display: flex;
     justify-content: space-between;
@@ -58,17 +82,33 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .photos__item {
     margin: 0;
     padding: 0;
+    border: none;
+    width: 100%;
   }
   .photos__describtion {
     background-color: @light-grey;
+    width: 304px;
+    margin: 0 auto;
+    height: 80px;
+    &--road {
+      width: 628px;
+    }
+    &--forest {
+      background-color: @forest-grey;
+    }
   }
-  .photos__link {
-    margin: 0;
-    padding: 0;
+  .photos__name {
+    padding-top: 15px;
+  }
+  .photos__likes {
+    padding-right: 25px;
+    bottom:  25px;
   }
 }
 

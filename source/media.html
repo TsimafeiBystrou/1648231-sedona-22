@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="page-header">
+    <header class="page-header page-header--second">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -23,7 +23,7 @@
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="media.html">
+              <a class="main-nav__link main-nav__link--active" href="media.html">
                 Фото и видео
               </a>
             </li>
@@ -92,7 +92,7 @@
               </picture>
             </a>
           </div>
-          <div class="photos__describtion">
+          <div class="photos__describtion photos__describtion--road">
             <p class="photos__name">Неродные просторы</p>
             <div class="photos__info-wrapper">
               <p class="photos__author">Автор фото: Борис</p>
@@ -129,7 +129,7 @@
                 </picture>
               </a>
             </div>
-            <div class="photos__describtion">
+            <div class="photos__describtion photos__describtion--forest">
               <p class="photos__name">Дорога на север</p>
               <div class="photos__info-wrapper">
                 <p class="photos__author">Автор фото: Пётр</p>
@@ -138,12 +138,12 @@
             </div>
           </div>
           <div class="photos__box">
-            <div class="photos__item">
+            <div class="photos__item photos__item--devil-brige">
               <a href="#" class="photos__link">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/devil-brige-desktop-media.jpg">
                   <source media="(min-width: 768px)" srcset="img/devil-brige-tablet-media.jpg">
-                  <img class="photos__img" src="img/devil-brige.jpg" alt="Мост дьявола">
+                  <img class="photos__img" src="img/devil-brige-mobile.jpg" alt="Мост дьявола">
                 </picture>
               </a>
             </div>
@@ -161,13 +161,23 @@
         <div class="video__intro">
           <h1 class="video__title">Все ещё сомневаетесь?</h1>
           <h2 class="video__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-            раз.</h2>
+            раз!</h2>
         </div>
         <div class="video__item">
           <picture>
             <source media="(min-width: 1280px)" srcset="img/video-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg">
-            <img class="video__img" src="img/video.jpg" alt="Видео">
+            <img class="video__img" src="img/video-mobile.jpg" alt="Видео">
+            <div class="video__tool">
+              <div class="video__scale">
+                <div class="video__scale-point"></div>
+              </div>
+              <div class="video__control">
+                <div class="video__replay"></div>
+                <div class="video__subtitles"></div>
+                <div class="video__fullscreen"></div>
+              </div>
+            </div>
           </picture>
         </div>
       </section>

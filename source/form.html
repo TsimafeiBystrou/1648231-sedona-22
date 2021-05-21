@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="page-header">
+    <header class="page-header page-header--second">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -28,7 +28,7 @@
               </a>
             </li>
             <li class="main-nav__item main-nav__item--right">
-              <a class="main-nav__link" href="form.html">
+              <a class="main-nav__link main-nav__link--active" href="form.html">
                 Форма отзыва
               </a>
             </li>
@@ -78,74 +78,82 @@
       </div>
       <form action="https://echo.htmlacademy.ru" method="GET">
         <section class="form">
-          <div class="form__box">
+          <div class="form__box form__box--intro">
             <h1 class="form__title">Оставьте свой отзыв</h1>
             <h2 class="form__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
               посещенных вами достопримечательностях</h2>
           </div>
           <div class="form__box--large-screen">
             <div class="form__box">
-              <h3 class="form__intro">Представьтесь:</h3>
-              <div class="form__item">
-                <label class="form__label" for="name">Имя:</label>
-                <input class="form__input" type="text" value="Пётр" id="name">
+              <h3 class="form__intro form__intro--client-info">Представьтесь:</h3>
+              <div class="form__item form__item--client-info">
+                <label class="form__label form__label--client-info form__label--client-info-long"
+                  for="name">Имя*:</label>
+                <input class="form__input form__input--client-info form__input--client-info-long" type="text"
+                  value="Пётр" id="name">
               </div>
-              <div class="form__item">
-                <label class="form__label" for="surname">Фамилия:</label>
-                <input class="form__input" type="text" value="Иванов" id="surname">
+              <div class="form__item form__item--client-info">
+                <label class="form__label form__label--client-info" for="surname">Фамилия*:</label>
+                <input class="form__input form__input--client-info" type="text" value="Иванов" id="surname">
               </div>
-              <div class="form__item">
-                <label class="form__label" for="middle-name">Отчество:</label>
-                <input class="form__input" type="text" value="Александрович" id="middle-name">
+              <div class="form__item form__item--client-info">
+                <label class="form__label form__label--client-info" for="middle-name">Отчество:</label>
+                <input class="form__input form__input--client-info" type="text" value="Александрович" id="middle-name">
               </div>
             </div>
             <div class="form__box">
-              <h3 class="form__intro">Контактная информация:</h3>
+              <h3 class="form__intro form__intro--contact">Контактная информация:</h3>
               <div class="form__contacts">
-                <div class="form__item">
-                  <label class="form__label" for="phone">Контактный телефон:</label>
-                  <input class="form__input form__input--tablet" type="text" value="Введите телефон" id="phone">
-                  <div class="form__icon-box form__icon-box--phone"></div>
+                <div class="form__item form__item--contact">
+                  <label class="form__label form__label--contact" for="phone">Контактный телефон*:</label>
+                  <div class="form__contacts-wrapper">
+                    <input class="form__input form__input--tablet form__input--contact" type="text"
+                      value="Введите телефон" id="phone">
+                    <div class="form__icon-box form__icon-box--phone"></div>
+                  </div>
                 </div>
-                <div class="form__item">
-                  <label class="form__label" for="email">Электронная почта:</label>
-                  <input class="form__input form__input--tablet" type="text" value="Введите e-mail" id="email">
-                  <div class="form__icon-box form__icon-box--mail"></div>
+                <div class="form__item form__item--contact">
+                  <label class="form__label form__label--contact" for="email">Электронная почта*:</label>
+                  <div class="form__contacts-wrapper">
+                    <input class="form__input form__input--tablet form__input--contact" type="text"
+                      value="Введите e-mail" id="email">
+                    <div class="form__icon-box form__icon-box--mail"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="form__box">
+            <div class="form__box form__box--circle">
               <h3 class="form__intro">Ваше общее впечатления:</h3>
               <div class="form__item form__item--circle">
-                <input class="form__input form__input--circle" type="radio" id="positive" checked>
+                <input class="form__input form__input--circle" name="impression" type="radio" id="positive" checked>
                 <label class="form__label form__label--circle" for=" positive">Скорее положительное</label>
               </div>
               <div class="form__item form__item--circle">
-                <input class="form__input form__input--circle" type="radio" id="negative">
+                <input class="form__input form__input--circle" name="impression" type="radio" id="negative">
                 <label class="form__label form__label--circle" for="negative">Скорее отрицательное</label>
               </div>
               <div class="form__item form__item--circle">
-                <input class="form__input form__input--circle" type="radio" id="doubts">
+                <input class="form__input form__input--circle" name="impression" type="radio" id="doubts">
                 <label class="form__label form__label--circle" for="doubts">Затрудняюсь ответить</label>
               </div>
             </div>
           </div>
-          <div class="form__box">
-            <h3 class="form__intro">Посещенные достопримечательности:</h3>
+          <div class="form__box form__box--checkbox">
+            <h3 class="form__intro form__intro--checkbox">Посещенные достопримечательности:</h3>
             <div class="form__attractions">
-              <div class="form__item form__item--attractions">
+              <div class="form__item form__item--checkbox">
                 <input class="form__input form__input--checkbox" type="checkbox" id="brige" checked>
                 <label class="form__label form__label--checkbox" for="brige">Мост Дьявола</label>
               </div>
-              <div class="form__item form__item--attractions">
+              <div class="form__item form__item--checkbox">
                 <input class="form__input form__input--checkbox" type="checkbox" id="mountain" checked>
                 <label class="form__label form__label--checkbox" for="mountain">Гора Колокол</label>
               </div>
-              <div class="form__item form__item--attractions">
+              <div class="form__item form__item--checkbox">
                 <input class="form__input form__input--checkbox" type="checkbox" id="park" checked>
                 <label class="form__label form__label--checkbox" for="park">Слайд-парк</label>
               </div>
-              <div class="form__item form__item--attractions">
+              <div class="form__item form__item--checkbox">
                 <input class="form__input form__input--checkbox" type="checkbox" id="rocks">
                 <label class="form__label form__label--checkbox" for="rocks">Красные скалы</label>
               </div>
@@ -157,7 +165,7 @@
               <textarea name="emotion">Опишите подробно все свои восторги</textarea>
             </div>
             <div class="form__submit">
-              <button class=button"" type="submit">Отправить отзыв</button>
+              <button class="button" type="submit">Отправить отзыв</button>
             </div>
           </div>
         </section>

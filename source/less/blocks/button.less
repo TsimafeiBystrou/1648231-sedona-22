@@ -8,5 +8,23 @@
   height: 58px;
   margin-left: 0 auto;
   border: none;
-  margin-top: 54px;
+  margin-top: 65px;
+  margin-bottom: 50px;
+  &:hover {
+    background-color: @button-hover;
+  }
+  &:active {
+    background-color: @button-active;
+  }
+  &:active .button__text {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 458px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
 }
