@@ -1,5 +1,6 @@
 .page-footer {
   background-color: @white;
+  min-height: 235px;
 }
 
 .page-footer__hashtag {
@@ -24,24 +25,27 @@
 
 .page-footer__copyright {
   padding-top: 45px;
-  padding-right: 119px;
-  padding-left: 80px;
+  padding-right: 120px;
+  padding-left: 95px;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
   position: relative;
   width: 128px;
   margin: 0 auto;
-  &::before {
-    content: "";
-    display: block;
-    background-image: url(../img/icon-htmlacademy.svg);
-    position: absolute;
-    top: 43px;
-    left: 197px;
-    width: 27px;
-    height: 34px;
-    background-repeat: no-repeat;
+  display: flex;
+
+}
+
+.page-footer__copyright-svg {
+  position: absolute;
+  padding-left: 102px;
+  &:hover path {
+    fill: @main-blue;
+  }
+  &:active path {
+    fill: @black;
+    opacity: 0.3;
   }
 }
 
@@ -50,33 +54,39 @@
   height: 48px;
   background-color: @main-blue;
   margin: 0 auto;
-  &--twitter {
-    background-image: url(../img/icon-twitter.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+  &:hover {
+    background-color: @button-hover;
   }
-  &--facebook {
-    background-image: url(../img/icon-facebook.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+  &:active {
+    background-color: @button-active;
   }
-  &--youtube {
-    background-image: url(../img/icon-youtube.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+  &:active svg {
+    opacity: 0.3;
+  }
+  &--twitter-svg {
+    padding-top: 17px;
+  }
+  &--facebook-svg {
+    padding-top: 13px;
+  }
+  &--youtube-svg {
+    padding-top: 17px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    min-height: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
   .page-footer__hashtag {
     padding-top: 47px;
+    padding-left: 60px;
   }
   .page-footer__social-list {
     margin: 0 auto;
+    margin-left: 40px;
     list-style: none;
     padding-top: 36px;
   }
@@ -85,6 +95,15 @@
     margin-left: 6px;
   }
   .page-footer__copyright {
-   margin-right: 15px;
+   margin-left: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__social-list {
+    margin-left: 125px;
+  }
+  .page-footer__copyright {
+    margin-left: 55px;
   }
 }

@@ -17,9 +17,9 @@
   font-weight: normal;
   padding-top: 15px;
   padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 20px;
   color: @dark-grey;
-  width: 260px;
 }
 
 .video__item {
@@ -66,40 +66,46 @@
   margin-top: 45px;
 }
 
-.video__replay::before {
-  content: "";
-  display: block;
-  background-image: url(../img/video-replay.svg);
+.video__replay {
   position: absolute;
   left: 25px;
   top: 24px;
   width: 16px;
   height: 20px;
-  background-repeat: no-repeat;
+  &:hover path {
+    fill: @dark-grey;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .video__subtitles {
-  content: "";
-  display: block;
-  background-image: url(../img/video-subtitles.svg);
   position: absolute;
   right: 75px;
   top: 24px;
   width: 32px;
   height: 20px;
-  background-repeat: no-repeat;
+  &:hover path {
+    fill: @dark-grey;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .video__fullscreen {
-  content: "";
-  display: block;
-  background-image: url(../img/video-fullscreen.svg);
   position: absolute;
   right: 25px;
   top: 24px;
   width: 20px;
   height: 20px;
-  background-repeat: no-repeat;
+  &:hover path {
+    fill: @dark-grey;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -126,7 +132,7 @@
     bottom: 0;
   }
   .video__control {
-    display: none;
+    background-color: transparent;
   }
   .video__scale {
     background-color: rgba(255,255,255,0.2);
@@ -134,8 +140,82 @@
     height: 3px;
     top: 45px;
     position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
+    left: 285px;
+  }
+  .video__scale-point {
+    left: 115px;
+  }
+  .video__replay{
+    position: absolute;
+    left: 35px;
+    top: -8px;
+    width: 16px;
+    height: 20px;
+    & path {
+      fill: @white;
+    }
+    &:hover path {
+      fill: @white;
+      opacity: 0.6;
+    }
+    &:active {
+      fill: @white;
+      opacity: 0.3;
+    }
   }
 
+  .video__subtitles {
+    position: absolute;
+    right: 92px;
+    top: -8px;
+    width: 32px;
+    height: 20px;
+    & path {
+      fill: @white;
+    }
+    &:hover path {
+      fill: @white;
+      opacity: 0.6;
+    }
+    &:active {
+      fill: @white;
+      opacity: 0.3;
+    }
+  }
+
+  .video__fullscreen {
+    position: absolute;
+    right: 40px;
+    top: -8px;
+    width: 20px;
+    height: 20px;
+    & path {
+      fill: @white;
+    }
+    &:hover path {
+      fill: @white;
+      opacity: 0.6;
+    }
+    &:active {
+      fill: @white;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    padding-bottom: 85px;
+  }
+  .video__tool {
+    width: 800px;
+    height: 93px;
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    bottom: 0;
+  }
+  .video__scale {
+    width: 540px;
+    left: 360px;
+  }
 }

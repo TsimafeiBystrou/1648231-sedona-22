@@ -23,6 +23,9 @@
   line-height: 24px;
   font-weight: normal;
   color: @dark-grey;
+  &--tablet {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -36,5 +39,8 @@
   }
   .search__subtitle {
     padding-top: 10px;
+    &--tablet {
+      display: block;
+    }
   }
 }

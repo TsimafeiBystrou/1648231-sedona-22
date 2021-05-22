@@ -14,7 +14,7 @@
     height: 57px;
     background: url(../img/polygon.svg) no-repeat center;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
     z-index: 1;
   }
 }
@@ -22,6 +22,12 @@
 .page-main__img {
   margin: 0 auto;
   padding-top: 145px;
+}
+
+@media (min-resolution: 2dppx) {
+  .page-main__img-bg {
+    background-image: url(../img/main-background@2x.jpg);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -32,11 +38,21 @@
     height: 518px;
     background-image: url(../img/main-background-tablet.jpg);
   }
+  @media (min-resolution: 2dppx) {
+    .page-main__img-bg {
+      background-image: url(../img/main-background-tablet@2x.jpg);
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__img-bg {
     height: 518px;
     background-image: url(../img/main-background-desktop.jpg);
+  }
+  @media (min-resolution: 2dppx) {
+    .page-main__img-bg {
+      background-image: url(../img/main-background-desktop@2x.jpg);
+    }
   }
 }
