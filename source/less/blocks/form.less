@@ -90,6 +90,24 @@
 
 .form__contacts-wrapper {
   display: flex;
+  &::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @icon-box;
+  }
+}
+
+.form__contacts-wrapper--phone::after {
+  background-image: url(../img/icon-phone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__contacts-wrapper--mail::after {
+  background-image: url(../img/icon-mail.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form__label {
@@ -205,22 +223,6 @@
 
 .form__label--circle:active:before {
   background-color: @active-grey;
-}
-
-.form__icon-box {
-  width: 60px;
-  height: 60px;
-  background-color: @icon-box;
-  &--phone {
-    background-image: url(../../img/icon-phone.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  &--mail {
-    background-image: url(../../img/icon-mail.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
 .form__textarea {
