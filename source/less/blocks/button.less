@@ -1,8 +1,9 @@
 .button {
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   color: white;
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
   text-transform: uppercase;
   width: 280px;
   height: 58px;
@@ -19,12 +20,43 @@
   &:active .button__text {
     opacity: 0.3;
   }
+  &--textarea {
+    margin-top: 55px;
+  }
+  &--popup {
+    width: 280px;
+    margin-top: 20px;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .button {
     width: 458px;
     margin-top: 80px;
     margin-bottom: 50px;
+    &--textarea {
+      width: 325px;
+      margin-top: 55px;
+    }
+    &--popup {
+      margin-top: 40px;
+    }
+    &--popup-fail {
+      width: 275px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    margin-top: 90px;
+    &--textarea {
+      width: 480px;
+      margin-top: 55px;
+    }
+    &--popup {
+      margin-top: 40px;
+    }
   }
 }
