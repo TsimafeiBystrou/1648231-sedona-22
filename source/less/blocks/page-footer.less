@@ -1,6 +1,7 @@
 .page-footer {
   background-color: @white;
   min-height: 235px;
+  box-shadow: 0px 15px rgba(0, 1, 1, 0.15);
 }
 
 .page-footer__hashtag {
@@ -33,10 +34,9 @@
   position: relative;
   margin: 0 auto;
   display: flex;
-
 }
 
-.page-footer__copyright-svg {
+.page-footer__academy-svg {
   position: absolute;
   padding-left: 102px;
   &:hover path {
@@ -62,15 +62,17 @@
   &:active svg {
     opacity: 0.3;
   }
-  &--twitter-svg {
-    padding-top: 17px;
-  }
-  &--facebook-svg {
-    padding-top: 13px;
-  }
-  &--youtube-svg {
-    padding-top: 17px;
-  }
+}
+.page-footer__twitter-svg {
+  padding-top: 17px;
+}
+
+.page-footer__youtube-svg {
+  padding-top: 17px;
+}
+
+.page-footer__facebook-svg {
+  padding-top: 13px;
 }
 
 @media (min-width: @tablet-width) {
@@ -94,7 +96,8 @@
     margin-left: 6px;
   }
   .page-footer__copyright {
-    margin-left: 25px;
+    padding-left: 120px;
+    padding-right: 100px;
   }
 }
 
@@ -104,5 +107,6 @@
   }
   .page-footer__copyright {
     margin-left: 55px;
+    padding-left: 95px;
   }
 }
